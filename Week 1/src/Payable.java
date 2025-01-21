@@ -1,3 +1,3 @@
 public interface Payable {
-    int calcPaymentAmount();
+    public double calcPaymentAmount();
 }

@@ -1,29 +1,28 @@
 public class Employee extends Person implements Payable{
 //    protected String name;
-    protected long ID;
-    protected int salary;
-    protected int department;
+    private int ID;
+    private double salary;
+    private String department;
+    private static int employeeNumber = 0;
 
-    protected static int employeeNumber = 1;
-
-    public Employee(String name, int salary, int department){
-        super(name);
-        this.salary = salary;
-        this.department = department;
-        this.ID = employeeNumber;
+    public Employee(String n, double s, String d){
+        this.name = n;
+        this.salary = s;
+        this.department = d;
         employeeNumber++;
+        this.ID = employeeNumber;
     }
 
-    public int calcPaymentAmount(){
+    public double calcPaymentAmount(){
         return this.salary;
     }
 
     public int getIDcount(){
-        return employeeNumber - 1;
+        return employeeNumber;
     }
 
     public void editName(String newName){
-        setName(newName);
+        this.name = newName;
     }
 
     public void setName(String name){
@@ -34,27 +33,19 @@ public class Employee extends Person implements Payable{
         return name;
     }
 
-    public int getSalary() {
-        return salary;
+    public double getSalary() {
+        return this.salary;
     }
 
     public void setSalary(int salary) {
         this.salary = salary;
     }
 
-    public int getDepartment() {
+    public String getDepartment() {
         return department;
     }
 
-    public void setDepartment(int department) {
+    public void setDepartment(String department) {
         this.department = department;
-    }
-
-    public static int getEmployeeNumber() {
-        return employeeNumber;
-    }
-
-    public static void setEmployeeNumber(int employeeNumber) {
-        Employee.employeeNumber = employeeNumber;
     }
 }

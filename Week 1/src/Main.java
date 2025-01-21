@@ -11,10 +11,10 @@ public class Main {
 //        Vec2d diff = v2.minus(v1);
 //        System.out.println(diff.x + ", " + diff.y);
 
-        Employee employee1 = new Employee("David", 5000, 1);
+        Employee employee1 = new Employee("David", 5000, "A");
         System.out.println(employee1);
 
-        Manager manager = new Manager("Cole", 10000, 3,2000);
+        Manager manager = new Manager("Cole", 10000, "C",2000);
         System.out.println(manager.calcTotalEarnings());
     }
 }

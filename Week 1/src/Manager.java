@@ -1,16 +1,16 @@
 public class Manager extends Employee{
-    private int bonus;
+    private double bonus;
 
-    public Manager(String name,  int salary, int department, int bonus){
-        super(name, salary, department);
-        this.bonus = bonus;
+    public Manager(String n,  int s, String d, double b){
+        super(n, s, d);
+        this.bonus = b;
     }
 
-    public int calcTotalEarnings(){
-        return salary + bonus;
+    public double calcTotalEarnings(){
+        return getSalary() + bonus;
     }
 
-    public int getBonus() {
+    public double getBonus() {
         return bonus;
     }
 

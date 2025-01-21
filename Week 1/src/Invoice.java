@@ -1,17 +1,17 @@
 public class Invoice implements Payable{
-    protected int value;
-    protected String description;
+    double value;
+    String description;
 
-    public Invoice(int value, String description){
-        this.value = value;
-        this.description = description;
+//    public Invoice(double value, String description){
+//        this.value = value;
+//        this.description = description;
+//    }
+
+    public double calcPaymentAmount(){
+        return this.value;
     }
 
-    public int calcPaymentAmount(){
-        return value;
-    }
-
-    public int getValue() {
+    public double getValue() {
         return value;
     }
 
